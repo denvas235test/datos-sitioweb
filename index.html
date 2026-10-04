@@ -117,7 +117,7 @@ footer a { color: var(--ink); }
 <header class="bar">
   <div class="bar-inner">
     <div class="brand">Denvas<span>web</span></div>
-    <div class="progress-text" id="progress-text" aria-live="polite">Faltan 4</div>
+    <div class="progress-text" id="progress-text" aria-live="polite">Faltan 5</div>
   </div>
   <div class="progress-line" id="progress-line"><i id="progress-fill"></i></div>
 </header>
@@ -125,7 +125,7 @@ footer a { color: var(--ink); }
 <main>
   <div id="form-wrap">
     <h1>Cuéntanos de tu negocio</h1>
-    <p class="lead">Solo necesitamos <strong>4 datos</strong> para empezar. Lo demás te lo pedimos después por WhatsApp.</p>
+    <p class="lead">Solo necesitamos <strong>5 datos</strong> para empezar. Lo demás te lo pedimos después por WhatsApp.</p>
 
     <form id="mock-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
       <input type="hidden" name="access_key" id="access-key" value="cd3b3949-7426-4125-aeca-8658371a2487">
@@ -153,6 +153,10 @@ footer a { color: var(--ink); }
           <label for="telefono">Teléfono<span class="req" aria-hidden="true">*</span><span class="hint">El número donde te escribimos y te llamamos</span></label>
           <input type="tel" id="telefono" name="Teléfono" required data-req inputmode="tel" autocomplete="off">
         </div>
+        <div class="field">
+          <label for="correo">Correo electrónico<span class="req" aria-hidden="true">*</span><span class="hint">Aquí te llegarán los mensajes de tus clientes</span></label>
+          <input type="email" id="correo" name="Correo del cliente" required data-req inputmode="email" autocomplete="off">
+        </div>
       </fieldset>
 
       <fieldset>
@@ -162,10 +166,6 @@ footer a { color: var(--ink); }
         <div class="field">
           <label for="horario">Horario<span class="hint">Por ejemplo: lunes a viernes de 8 a 5, o las 24 horas</span></label>
           <input type="text" id="horario" name="Horario" autocomplete="off">
-        </div>
-        <div class="field">
-          <label for="correo">Correo electrónico<span class="hint">Aquí te llegarán los mensajes de tus clientes</span></label>
-          <input type="email" id="correo" name="Correo del cliente" inputmode="email" autocomplete="off">
         </div>
         <div class="field">
           <label for="licencia">Licencia o seguro<span class="hint">Si tienes, escríbelo tal como es. Si no, déjalo vacío</span></label>
@@ -237,8 +237,8 @@ footer a { color: var(--ink); }
       return;
     }
     var mail = document.getElementById('correo');
-    if (mail.value.trim() !== '' && !mail.checkValidity()) {
-      say('El correo no parece correcto. Revísalo o déjalo vacío.', true);
+    if (!mail.checkValidity()) {
+      say('El correo no parece correcto. Revisa que tenga @ y un punto, por ejemplo nombre@correo.com.', true);
       mail.focus();
       return;
     }

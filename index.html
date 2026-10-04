@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
-<title>Datos del cliente para el mockup del sitio web — Denvasweb</title>
-<meta name="description" content="Formulario para reunir los datos de un negocio y crear el mockup de su sitio web.">
+<title>Datos de tu negocio — Denvasweb</title>
+<meta name="description" content="Formulario corto para reunir los datos de un negocio y preparar su sitio web.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
@@ -117,15 +117,15 @@ footer a { color: var(--ink); }
 <header class="bar">
   <div class="bar-inner">
     <div class="brand">Denvas<span>web</span></div>
-    <div class="progress-text" id="progress-text" aria-live="polite">Obligatorios: 0 de 4</div>
+    <div class="progress-text" id="progress-text" aria-live="polite">Faltan 4</div>
   </div>
   <div class="progress-line" id="progress-line"><i id="progress-fill"></i></div>
 </header>
 
 <main>
   <div id="form-wrap">
-    <h1>Datos del cliente para el mockup</h1>
-    <p class="lead">Llena lo que tengas. Con los <strong>4 datos obligatorios</strong> ya se puede empezar; entre más completo, mejor queda el mockup.</p>
+    <h1>Cuéntanos de tu negocio</h1>
+    <p class="lead">Solo necesitamos <strong>4 datos</strong> para empezar. Lo demás te lo pedimos después por WhatsApp.</p>
 
     <form id="mock-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
       <input type="hidden" name="access_key" id="access-key" value="cd3b3949-7426-4125-aeca-8658371a2487">
@@ -135,112 +135,63 @@ footer a { color: var(--ink); }
       <div class="hp" aria-hidden="true"><input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off"></div>
 
       <fieldset>
-        <legend>Lo mínimo para empezar</legend>
-        <p class="group-note">Los cuatro primeros son obligatorios.</p>
+        <legend>Lo importante</legend>
 
         <div class="field">
-          <label for="negocio">Nombre exacto del negocio<span class="req" aria-hidden="true">*</span><span class="hint">Como lo escribe en su logo o flyer</span></label>
+          <label for="negocio">Nombre del negocio<span class="req" aria-hidden="true">*</span><span class="hint">Como aparece en tu logo o tarjeta</span></label>
           <input type="text" id="negocio" name="Nombre del negocio" required data-req autocomplete="off">
         </div>
         <div class="field">
-          <label for="servicios">Oficio y servicios<span class="req" aria-hidden="true">*</span><span class="hint">Lista corta. Por ejemplo: instalación, reparación, lijado</span></label>
-          <textarea id="servicios" name="Oficio y servicios" required data-req></textarea>
+          <label for="servicios">¿Qué servicios haces?<span class="req" aria-hidden="true">*</span><span class="hint">Por ejemplo: instalar y reparar pisos</span></label>
+          <textarea id="servicios" name="Servicios" required data-req></textarea>
         </div>
         <div class="field">
-          <label for="zona">Zona donde trabaja<span class="req" aria-hidden="true">*</span><span class="hint">Ciudad, condado o millas a la redonda</span></label>
+          <label for="zona">¿En qué ciudad o zona trabajas?<span class="req" aria-hidden="true">*</span><span class="hint">Por ejemplo: Miami y 30 millas alrededor</span></label>
           <input type="text" id="zona" name="Zona donde trabaja" required data-req autocomplete="off">
         </div>
         <div class="field">
-          <label for="telefono">Teléfono para llamadas<span class="req" aria-hidden="true">*</span></label>
+          <label for="telefono">Teléfono<span class="req" aria-hidden="true">*</span><span class="hint">El número donde te escribimos y te llamamos</span></label>
           <input type="tel" id="telefono" name="Teléfono" required data-req inputmode="tel" autocomplete="off">
         </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Si puedes, agrega esto</legend>
+        <p class="group-note">Puedes dejarlo vacío.</p>
+
         <div class="field">
-          <label for="whatsapp">WhatsApp<span class="hint">Solo si es distinto al teléfono</span></label>
-          <input type="tel" id="whatsapp" name="WhatsApp" inputmode="tel" autocomplete="off">
-        </div>
-        <div class="field">
-          <label for="horario">Horario<span class="hint">O escribe si atiende las 24 horas</span></label>
+          <label for="horario">Horario<span class="hint">Por ejemplo: lunes a viernes de 8 a 5, o las 24 horas</span></label>
           <input type="text" id="horario" name="Horario" autocomplete="off">
         </div>
         <div class="field">
-          <label for="logo">Logo o flyer<span class="hint">Pega un enlace (Google Drive, Facebook…) o escribe «lo envío por WhatsApp»</span></label>
-          <input type="text" id="logo" name="Logo o flyer" autocomplete="off">
-        </div>
-      </fieldset>
-
-      <fieldset>
-        <legend>Para que quede mejor</legend>
-        <div class="field">
-          <label for="fotos">Fotos reales<span class="hint">Trabajos terminados, equipo, vehículo. Enlace o «las envío por WhatsApp»</span></label>
-          <input type="text" id="fotos" name="Fotos" autocomplete="off">
-        </div>
-        <div class="field">
-          <label for="estilo">Colores o estilo<span class="hint">O un sitio web que le guste</span></label>
-          <input type="text" id="estilo" name="Colores o estilo" autocomplete="off">
-        </div>
-        <div class="field">
-          <label for="idioma">Idioma del sitio</label>
-          <select id="idioma" name="Idioma del sitio">
-            <option value="">Elegir…</option>
-            <option>Español</option>
-            <option>Inglés</option>
-            <option>Español e inglés</option>
-          </select>
-        </div>
-        <div class="field">
-          <label for="correo">Correo del cliente<span class="hint">Donde llegarán los mensajes del formulario del sitio</span></label>
+          <label for="correo">Correo electrónico<span class="hint">Aquí te llegarán los mensajes de tus clientes</span></label>
           <input type="email" id="correo" name="Correo del cliente" inputmode="email" autocomplete="off">
         </div>
         <div class="field">
-          <label for="redes">Redes sociales<span class="hint">Enlace de Facebook o Instagram</span></label>
-          <input type="text" id="redes" name="Redes sociales" autocomplete="off">
-        </div>
-        <div class="field">
-          <label for="maps">Perfil de Google Maps<span class="hint">Enlace, si ya existe</span></label>
-          <input type="text" id="maps" name="Perfil de Google Maps" autocomplete="off">
-        </div>
-      </fieldset>
-
-      <fieldset>
-        <legend>Opcional</legend>
-        <div class="field">
-          <label for="frases">Frases sobre su negocio<span class="hint">Dos o tres, con sus palabras</span></label>
-          <textarea id="frases" name="Frases sobre su negocio"></textarea>
-        </div>
-        <div class="field">
-          <label for="licencia">Licencia o seguro<span class="hint">Solo con los datos exactos que dé el cliente</span></label>
+          <label for="licencia">Licencia o seguro<span class="hint">Si tienes, escríbelo tal como es. Si no, déjalo vacío</span></label>
           <textarea id="licencia" name="Licencia o seguro"></textarea>
         </div>
         <div class="field">
-          <label for="precios">Textos o precios a mostrar<span class="hint">Solo si el cliente los quiere en el sitio</span></label>
-          <textarea id="precios" name="Textos o precios a mostrar"></textarea>
-        </div>
-        <div class="field">
-          <label for="notas">Notas</label>
+          <label for="notas">¿Algo más que quieras contarnos?</label>
           <textarea id="notas" name="Notas"></textarea>
         </div>
       </fieldset>
 
-      <div class="rules">
-        <strong>Reglas del mockup</strong>
-        No se inventan testimonios, años de experiencia, reseñas, cifras ni certificaciones. Si el cliente no tiene algo, esa sección se omite. Todo lo que aparezca sale de lo que da el cliente o de su flyer y sus redes.
-      </div>
-
       <div class="actions">
-        <button type="submit" class="send" id="send">Enviar los datos</button>
+        <button type="submit" class="send" id="send">Enviar datos</button>
         <p class="status" id="status" role="status" aria-live="polite"></p>
       </div>
     </form>
 
     <footer>
-      Los datos se usan solo para crear el mockup del sitio web. <a href="https://denvasweb.com/privacidad/" target="_blank" rel="noopener">Política de privacidad</a>
+      Usamos tus datos solo para preparar tu sitio web. <a href="https://denvasweb.com/privacidad/" target="_blank" rel="noopener">Política de privacidad</a>
     </footer>
   </div>
 
   <section class="done-panel" id="done" hidden>
-    <h2>Datos enviados</h2>
-    <p>Ya llegaron al correo. Puedes llenar los datos de otro cliente.</p>
-    <button type="button" class="secondary" id="again">Llenar otro cliente</button>
+    <h2>¡Gracias! Recibimos tus datos</h2>
+    <p>Te escribiremos por WhatsApp para pedirte lo que falte.</p>
+    <button type="button" class="secondary" id="again">Enviar datos de otro negocio</button>
   </section>
 </main>
 
@@ -261,7 +212,8 @@ footer a { color: var(--ink); }
   function updateProgress() {
     var n = req.filter(function (el) { return el.value.trim() !== ''; }).length;
     var all = n === req.length;
-    pText.textContent = all ? 'Mínimo completo' : 'Obligatorios: ' + n + ' de ' + req.length;
+    var left = req.length - n;
+    pText.textContent = all ? 'Todo listo' : 'Faltan ' + left;
     pText.classList.toggle('done', all);
     pLine.classList.toggle('done', all);
     pFill.style.width = (n / req.length * 100) + '%';
@@ -280,18 +232,18 @@ footer a { color: var(--ink); }
     // Faltan datos obligatorios: se lleva al primero vacío
     var empty = req.filter(function (el) { return el.value.trim() === ''; })[0];
     if (empty) {
-      say('Falta un dato obligatorio: ' + form.querySelector('label[for="' + empty.id + '"]').childNodes[0].textContent + '.', true);
+      say('Falta escribir: ' + form.querySelector('label[for="' + empty.id + '"]').childNodes[0].textContent.replace('?', '').replace('¿', '') + '.', true);
       empty.focus();
       return;
     }
     var mail = document.getElementById('correo');
     if (mail.value.trim() !== '' && !mail.checkValidity()) {
-      say('El correo del cliente no parece válido. Revísalo o déjalo vacío.', true);
+      say('El correo no parece correcto. Revísalo o déjalo vacío.', true);
       mail.focus();
       return;
     }
     if (keyInput.value.indexOf('PEGA_AQUI') === 0) {
-      say('Este formulario aún no está conectado: falta la clave de Web3Forms.', true);
+      say('Este formulario no está conectado todavía.', true);
       return;
     }
 
@@ -309,11 +261,11 @@ footer a { color: var(--ink); }
         window.scrollTo(0, 0);
       })
       .catch(function () {
-        say('No se pudo enviar. Revisa la conexión y vuelve a intentarlo; lo que escribiste sigue aquí.', true);
+        say('No se pudo enviar. Revisa tu internet y toca Enviar otra vez. Lo que escribiste sigue aquí.', true);
       })
       .then(function () {
         sendBtn.disabled = false;
-        sendBtn.textContent = 'Enviar los datos';
+        sendBtn.textContent = 'Enviar datos';
       });
   });
 
